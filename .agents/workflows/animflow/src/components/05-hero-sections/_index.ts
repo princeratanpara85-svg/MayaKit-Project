@@ -1,0 +1,10 @@
+export { default as Hero01 } from "./Scroll3DTunnelHero";
+export { default as Hero02 } from "./BeamConvergenceHero";
+export { default as Hero03 } from "./TypeShimmerHero";
+export { default as Hero04 } from "./ParallaxDepthHero";
+export { default as Hero05 } from "./GlitchRevealHero";
+export { default as Hero06 } from "./AuroraVeilHero";
+export { default as Hero07 } from "./MarqueeWordsHero";
+export { default as Hero08 } from "./FloatingOrbitHero";
+export { default as Hero09 } from "./KineticTypeHero";
+export { default as Hero10 } from "./HyperspaceHero";

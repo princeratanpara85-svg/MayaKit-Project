@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #0C1E29;
+  --color-foreground: #E2E8F0;
+  --color-primary: #FFFE15;
+  --color-primary-foreground: #0C1E29;
+  --color-muted: #163648;
+  --color-border: rgba(255, 254, 21, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+}
+
+@keyframes ink-bloom {
+  0% { opacity: 0; transform: scale(0.2); }
+  25% { opacity: 0.85; }
+  100% { opacity: 0; transform: scale(2.6); }
+}
+
+.animate-ink-bloom {
+  animation: ink-bloom 6.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes spin360 { to { transform: rotate(360deg); } }
+@keyframes bouncy { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-30%); } }
+@keyframes wiggle { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+@keyframes blinkCaret { 0%,45% { opacity: 1; } 50%,95% { opacity: 0; } }
+@keyframes slotIn {
+  0% { transform: translateY(-120%); opacity: 0; filter: blur(4px); }
+  60% { transform: translateY(14%); }
+  100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+@keyframes beltmove { to { background-position: 52px 0; } }
+@keyframes ride { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes bobble { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes ringExpand { from { transform: scale(.2); opacity: .9; } to { transform: scale(1.7); opacity: 0; } }
